@@ -1,0 +1,280 @@
+body {
+  background-color: #1a1e1f;
+  color: rgb(244, 244, 244);
+  width: 100vw;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main-container {
+  max-width: 980px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.flex-dir-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* section{
+  width: 100%;
+} */
+header {
+  width: 100%;
+  padding: 23px 0px;
+  position: sticky;
+  top: 0;
+  background-color: rgb(22, 22, 22);
+  opacity: 0.9;
+  z-index: 100;
+}
+.nav-bar {
+  width: 454px;
+  line-height: 26px;
+}
+nav ul li a {
+  color: rgb(244, 244, 244);
+  font-size: 14px;
+  text-decoration: none;
+}
+nav ul li:nth-child(3) a {
+  color: rgb(0, 174, 234);
+}
+header,
+.nav-bar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+.header-section {
+  width: 100%;
+  height: 352px;
+  display: flex;
+  justify-content: center;
+}
+.header-section img {
+  width: 100%;
+}
+.bcg {
+  width: 100%;
+  position: absolute;
+}
+.header-text {
+  position: absolute;
+}
+.about-project {
+  width: 100%;
+  height: 465px;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 65px 0 65px;
+}
+.about-project h1 {
+  font-size: 28px;
+  line-height: 1.6em;
+}
+.about-project span {
+  color: rgb(0, 174, 234);
+  font-size: 20px;
+}
+
+/* TRAINING COURSES SECTION  */
+h4 {
+  color: #dbdbdb;
+  font-size: 24px;
+  margin: 35px 0 60px;
+}
+.courses {
+  background-color: #161616;
+}
+.training-courses {
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 39px;
+  row-gap: 20px;
+  /* background-color: #161616; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.course-card {
+  max-width: 300px;
+  max-height: 414px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid rgba(85, 85, 85, 1);
+  border-radius: 6px;
+}
+.course-details {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 105px;
+}
+.sub-card {
+  padding: 35px 0 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  gap: 30px;
+}
+.sub-card p {
+  font-size: 14px;
+}
+.course-title {
+  font-size: 18px;
+}
+.details {
+  color: rgb(0, 174, 234);
+}
+
+/* FOOTER SECTION */
+.footer {
+  height: 228px;
+  width: 100%;
+  padding: 60px 0 45px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.btn-contact-us {
+  color: #ffffff;
+  background-color: #00aef3;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.contact {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.social-media {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+}
+
+.partnership {
+  background-color: #2b2b2b;
+  max-height: 363px;
+  padding: 50px 0 100px;
+}
+
+.partners {
+  font-size: 24px;
+  color: rgb(244, 244, 244);
+  text-align: left;
+}
+
+.slider-container {
+  text-align: center;
+  color: #403f3d;
+  font-weight: 600;
+  font-size: 60px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  /* gap: 40px; */
+  align-items: center;
+  /* background-color: coral; */
+  justify-content: space-between;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  /* gap: 100px; */
+}
+
+.slide1 {
+  max-width: 980px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-center {
+  justify-content: center;
+  display: flex;
+}
+
+.slide img {
+  width: auto;
+}
+
+.prevButton,
+.nextButton {
+  /* left: 4px; */
+  /* width: 18px;
+  height: 35px; */
+  /* color: #f4f4f4; */
+  position: absolute;
+  top: 50%;
+  background-color: #2b2b2b;
+  text-decoration: none;
+  border: none;
+}
+.leftArrow ,
+.rightArrow {
+  height: 35px;
+  width: 18px;
+  color: #00aef3;
+  fill: #ebe6e6;
+  cursor: pointer;
+
+}
+.rightArrow{
+transform: rotate(-180deg);
+}
+.prevButton {
+  left: 200px;
+}
+.nextButton {
+  right: 200px;
+}
+.slider-divs {
+  display: flex;
+  justify-content: center;
+  /* height: 10px;
+  width: 100%; */
+}
+.slide-div {
+  width: 6px;
+  height: 6px;
+  background-color: #ebe6e6;
+  border-radius: 100%;
+  margin: 0 6px;
+}
