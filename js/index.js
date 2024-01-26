@@ -1,9 +1,9 @@
 "strict mode";
-let div = document.querySelectorAll(".slide-div");
+const slideDiv = document.querySelectorAll(".slide-div");
+let slidesLength = slideDiv.length;
 let currentIndex = 0;
 const slides = document.querySelectorAll(".slide");
 const totalSlides = slides.length;
-console.log(slides.length);
 
 function showSlide(index) {
   if (index < 0) {
@@ -17,15 +17,6 @@ function showSlide(index) {
   const transformValue = -currentIndex * 100 + "%";
   document.querySelector(".slider").style.transform =
     "translateX(" + transformValue + ")";
-
-  for (let i of div) {
-    if (currentIndex === 0) {
-      console.log(div[0]);
-      div[0].style.backgroundColor = "#ffffff";
-    } else {
-      i.style.backgroundColor = "#E8E6E6";
-    }
-  }
 }
 
 const prevSlide = () => {
@@ -35,3 +26,37 @@ const prevSlide = () => {
 const nextSlide = () => {
   showSlide(currentIndex + 1);
 };
+
+
+for (let y of slideDiv) {
+  y.addEventListener("click", () => {
+    y.style.backgroundColor = "#ffffff"
+    if (y === slideDiv[0]) {
+      showSlide((currentIndex = 0));
+    } else if (y === slideDiv[1]) {
+      showSlide((currentIndex = 1));
+    } else if (y === slideDiv[2]) {
+      showSlide((currentIndex = 2));
+    }
+  });
+}
+
+// FAQ
+
+const questions = document.querySelectorAll(".question");
+const arrowDown = document.querySelector(".arrow-down");
+
+let counter = 0;
+const answer = document.querySelector(".answer");
+questions.forEach((question) => {
+  question.addEventListener("click", () => {
+    counter++;
+    if (counter % 2 !== 0) {
+      answer.style.display = "grid";
+      arrowDown.style.transform = "rotate(-180deg)";
+    } else {
+      answer.style.display = "none";
+      arrowDown.style.transform = "rotate(0deg)";
+    }
+  });
+});

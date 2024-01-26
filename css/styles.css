@@ -10,7 +10,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin: 0 auto;
 }
 .flex-dir-row {
@@ -143,7 +142,6 @@ h4 {
 
 /* FOOTER SECTION */
 .footer {
-  height: 228px;
   width: 100%;
   padding: 60px 0 45px 0;
   display: flex;
@@ -163,10 +161,12 @@ h4 {
   border-radius: 5px;
 }
 .contact {
-  height: 100%;
+  max-width: 150px;
+  gap: 40px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  align-items: end;
 }
 .social-media {
   display: flex;
@@ -247,17 +247,16 @@ h4 {
   text-decoration: none;
   border: none;
 }
-.leftArrow ,
+.leftArrow,
 .rightArrow {
   height: 35px;
   width: 18px;
   color: #00aef3;
   fill: #ebe6e6;
   cursor: pointer;
-
 }
-.rightArrow{
-transform: rotate(-180deg);
+.rightArrow {
+  transform: rotate(-180deg);
 }
 .prevButton {
   left: 200px;
@@ -277,20 +276,18 @@ transform: rotate(-180deg);
   background-color: #ebe6e6;
   border-radius: 100%;
   margin: 0 6px;
+  cursor: pointer;
 }
 
-
-
-
 /* FAQ SECTION */
-.faq{
+.faq {
+  padding: 100px 0 75px;
   width: 100%;
-  max-height: 484px;
   display: flex;
   justify-content: center;
   background-color: #161616;
 }
-.faq-title{
+.faq-title {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -309,10 +306,42 @@ transform: rotate(-180deg);
   padding: 30px 0;
   border-bottom: 1px solid #403f3d;
   font-size: 18px;
-
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 20px;
+}
+.question p {
+  font-size: 14px;
+  line-height: 2;
 }
 .content {
-  /* gap: 20px; */
   display: flex;
   flex-direction: column;
+}
+.sub-question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.answer {
+  display: none;
+  gap: 40px;
+}
+.arrowDown {
+  fill: #f4f4f4;
+}
+.arrow-down {
+  cursor: pointer;
+}
+.sub-question button {
+  background-color: #161616;
+  border: none;
+}
+.answer span {
+  font-weight: 900;
+}
+.answer-steps {
+  margin-left: 1.5em !important;
 }
