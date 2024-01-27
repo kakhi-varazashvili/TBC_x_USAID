@@ -18,6 +18,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.flex-dir-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
 /* section{
   width: 100%;
 } */
@@ -57,17 +63,23 @@ main {
   width: 100%;
   height: 352px;
   display: flex;
+  position: relative;
   justify-content: center;
+  background-image: url(/assets/images/meeting.webp);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 .header-section img {
   width: 100%;
 }
-.bcg {
-  width: 100%;
-  position: absolute;
-}
+
 .header-text {
-  position: absolute;
+  display: flex;
+  top: 50%;
+  max-width: 980px;
+  left: 0;
+  gap: 30px;
 }
 .about-project {
   width: 100%;
@@ -83,7 +95,7 @@ main {
   line-height: 1.6em;
 }
 .about-project span {
-  color: rgb(0, 174, 234);
+  color: #00aeea;
   font-size: 20px;
 }
 
@@ -230,7 +242,12 @@ h4 {
   justify-content: center;
   display: flex;
 }
-
+.header-text h3 {
+  font-size: 42px;
+  color: #f4f4f4;
+  font-weight: 900;
+  display: block;
+}
 .slide img {
   width: auto;
 }
@@ -344,4 +361,27 @@ h4 {
 }
 .answer-steps {
   margin-left: 1.5em !important;
+}
+
+
+/* HOVERS */
+.nav-list a, .more, .all-faq, .details, .btn-contact-us{
+  transition:  0.3s all;
+}
+.nav-list:hover a{
+  color: #00aef3;
+  /* transition: transform 0.3s all; */
+
+
+}
+.more:hover, .all-faq:hover{
+  color: rgb(160, 160, 160);
+  /* opacity: 0.7; */
+}
+.details:hover{
+  opacity: 0.7;
+}
+.btn-contact-us:hover {
+  background-color: #dbdbdb;
+  color: #403f3d;
 }
