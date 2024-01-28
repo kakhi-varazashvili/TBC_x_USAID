@@ -125,7 +125,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-   background-image: url(assets/images/meeting.webp);
+   background-image: url(../assets/images/meeting.webp);
 }
 
 .about-project {
