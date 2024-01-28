@@ -475,6 +475,9 @@ main {
   .header-text h3 {
     font-size: 38px;
   }
+  .slide1 img {
+    width: 150px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -528,6 +531,13 @@ main {
   .nav-bar {
     display: none;
   }
+  .slide1 img {
+    width: 120px;
+  }
+  .partners {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -568,6 +578,27 @@ main {
   .content {
     margin: 0;
   }
+  .partners {
+    font-size: 16px;
+    padding: 0;
+  }
+  .partnership {
+    padding: 25px 0;
+  }
+  .slide1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nextButton {
+    right: 30px;
+  }
+  .prevButton {
+    left: 30px;
+  }
+  .prevButton,
+  .nextButton {
+    transform: translate(0, -130%);
+  }
 }
 @media screen and (max-width: 380px) {
   .footer {
@@ -583,6 +614,12 @@ main {
     margin-top: 40px;
     max-width: unset;
   }
+  .course-card {
+    height: 350px;
+  }
+  .sub-card {
+    height: 250px;
+  }
   .social-media {
     justify-content: center;
     width: auto;
@@ -592,5 +629,9 @@ main {
   }
   .rules {
     width: 100%;
+  }
+  .slide1 {
+    flex-direction: column;
+    gap: 20px;
   }
 }
