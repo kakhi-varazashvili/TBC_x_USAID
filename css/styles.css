@@ -86,7 +86,7 @@ main {
 .bcg-image {
   width: 100%;
   height: 352px;
-  background-image: url(/assets/images/meeting.webp);
+  background-image: url(assets/images/meeting.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
