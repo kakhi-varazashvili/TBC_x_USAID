@@ -11,6 +11,40 @@ body {
   flex-direction: column;
   margin: 0 auto;
 }
+.burger_menu {
+  width: 26px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+
+.burger_bar {
+  height: 3px;
+  border-radius: 8px;
+  width: 100%;
+  position: absolute;
+  background-color: #dbdbdb;
+  transition: 0.8s ease-in-out;
+}
+
+.bar1 {
+  width: 50%;
+  top: 0;
+  left: 0;
+}
+
+.bar2 {
+  top: 45%;
+}
+
+.bar3 {
+  width: 50%;
+  bottom: 0;
+  right: 0;
+}
+
 .flex-dir-row {
   display: flex;
   flex-direction: row;
@@ -86,7 +120,7 @@ main {
 .bcg-image {
   width: 100%;
   height: 352px;
-  background-image: url(assets/images/meeting.webp);
+  background-image: url(/assets/images/meeting.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -481,6 +515,12 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  .nav-bar ul {
+    justify-content: unset;
+  }
+  .burger-menu {
+    z-index: 1000;
+  }
   .main-container {
     padding: 0px 25px;
   }
@@ -504,6 +544,44 @@ main {
   }
   .nav-bar {
     display: none;
+    /* background-color: #00aeea; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    /* right: -100%; */
+    height: 100%;
+    z-index: 900;
+    /* opacity: 0; */
+    transition: 1s ease-in-out;
+  }
+  .burger_menu {
+    /* background-color: #00aeea; */
+    display: block;
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+  }
+  .burger-menu-list {
+    display: flex;
+    z-index: 901;
+    height: 100%;
+    flex-direction: column;
+    background-color: #1a1e1f;
+    width: clamp(250px, 60%, 100%);
+    align-items: flex-end;
+    padding: 80px  20px ;
+    gap: 0;
+    transition: 0.3s ease-in-out;
+
+    font-size: 2rem;
+  }
+  .nav-lists {
+    margin-top: 4rem;
+    font-size: 2rem;
+  }
+  .burger_menu:active nav-bar{
+    right: 100%;
+
   }
 }
 @media screen and (max-width: 650px) {
@@ -528,9 +606,7 @@ main {
   .header-text h3 {
     font-size: 34px;
   }
-  .nav-bar {
-    display: none;
-  }
+
   .slide1 img {
     width: 120px;
   }

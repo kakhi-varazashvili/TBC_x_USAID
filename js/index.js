@@ -27,10 +27,9 @@ const nextSlide = () => {
   showSlide(currentIndex + 1);
 };
 
-
 for (let y of slideDiv) {
   y.addEventListener("click", () => {
-    y.style.backgroundColor = "#ffffff"
+    y.style.backgroundColor = "#ffffff";
     if (y === slideDiv[0]) {
       showSlide((currentIndex = 0));
     } else if (y === slideDiv[1]) {
@@ -45,9 +44,9 @@ for (let y of slideDiv) {
 
 const questions = document.querySelectorAll(".question");
 const arrowDown = document.querySelector(".arrow-down");
+const answer = document.querySelector(".answer");
 
 let counter = 0;
-const answer = document.querySelector(".answer");
 questions.forEach((question) => {
   question.addEventListener("click", () => {
     counter++;
@@ -59,4 +58,16 @@ questions.forEach((question) => {
       arrowDown.style.transform = "rotate(0deg)";
     }
   });
+});
+
+const navBar = document.querySelector(".nav-bar");
+const burgerMenu = document.querySelector(".burger_menu");
+// let counter = 0;
+burgerMenu.addEventListener("click", () => {
+  counter++;
+  if (counter % 2 !== 0) {
+    navBar.style.display = "block";
+  } else {
+    navBar.style.display = "none";
+  }
 });
