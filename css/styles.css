@@ -120,11 +120,16 @@ main {
 .bcg-image {
   width: 100%;
   height: 352px;
+<<<<<<< HEAD
   background-image: url(../assets/images/meeting.webp);
+=======
+ 
+>>>>>>> 2a372c9524612ae72d5afd6f82cf1cfd936ecd4b
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+   background-image: url(../assets/images/meeting.webp);
 }
 
 .about-project {
