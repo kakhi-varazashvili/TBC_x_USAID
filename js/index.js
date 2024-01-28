@@ -62,7 +62,6 @@ questions.forEach((question) => {
 
 const navBar = document.querySelector(".nav-bar");
 const burgerMenu = document.querySelector(".burger_menu");
-// let counter = 0;
 burgerMenu.addEventListener("click", () => {
   counter++;
   if (counter % 2 !== 0) {
