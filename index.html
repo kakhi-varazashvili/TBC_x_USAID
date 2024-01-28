@@ -34,7 +34,9 @@
     <!-- NAVBAR SECTION -->
     <header>
       <div class="main-container flex-dir-row">
-        <a href="#"> <img src="assets/images/logo.svg" alt="" /></a>
+        <a href="#">
+          <img class="logo" src="assets/images/logo.svg" alt=""
+        /></a>
         <nav class="nav-bar">
           <ul>
             <li class="nav-list">
@@ -55,20 +57,20 @@
     </header>
     <main class="main">
       <section class="header-section">
-        <!-- <img
-              src="/assets/images/meeting.webp"
-              class="meeting"
-              alt="Meeting Image"
-            /> -->
-        <div class="main-container flex-center">
-          <div class="header-text flex-dir-col">
-            <h3>TBC x USAID <br /></h3>
-            <h3>ᲢᲔᲥᲜᲝᲚᲝᲒᲘᲣᲠᲘ ᲒᲐᲜᲐᲗᲚᲔᲑᲘᲡᲗᲕᲘᲡ</h3>
+        <div class="main-container">
+          <div class="main-header-title">
+            <div class="header-text">
+              <h3 class="title">
+                TBC x USAID <br />
+                <span>ᲢᲔᲥᲜᲝᲚᲝᲒᲘᲣᲠᲘ ᲒᲐᲜᲐᲗᲚᲔᲑᲘᲡᲗᲕᲘᲡ</span>
+              </h3>
+            </div>
           </div>
         </div>
+        <div class="bcg-image"></div>
       </section>
       <section class="about-project">
-        <div class="main-container">
+        <div class="main-container sp-btw">
           <h1>
             „ TBC x USAID - ტექნოლოგიური განათლებისთვის “ პროგრამა საინფორმაციო
             ტექნოლოგიებით დაინტერესებულ ადამიანებს გთავაზობთ სრულად დაფინანსებულ
@@ -83,7 +85,7 @@
       <!-- TRAINING COURSES SECTION -->
       <section class="courses">
         <div class="main-container">
-          <h4>სასწავლო კურსები</h4>
+          <h4 class="learning">სასწავლო კურსები</h4>
 
           <div class="training-courses">
             <div class="course-card">
@@ -190,7 +192,7 @@
           </div>
         </div>
       </section>
-      <section class="partnership">
+      <section class="partnership sp-btw flex-dir-col">
         <div class="main-container">
           <h5 class="partners">პროექტის პარტნიორები</h5>
         </div>
@@ -224,25 +226,30 @@
             <div class="slide-div"></div>
             <div class="slide-div"></div>
           </div>
-
-          <button class="prevButton" onclick="prevSlide()">
-            <svg
-              class="leftArrow"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 21 41"
-            >
-              <path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
-            </svg>
-          </button>
-          <button class="nextButton" onclick="nextSlide()">
-            <svg
-              class="rightArrow"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 21 41"
-            >
-              <path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
-            </svg>
-          </button>
+          <div class="btns">
+            <button class="prevButton" onclick="prevSlide()">
+              <svg
+                class="leftArrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 21 41"
+              >
+                <path
+                  d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"
+                ></path>
+              </svg>
+            </button>
+            <button class="nextButton" onclick="nextSlide()">
+              <svg
+                class="rightArrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 21 41"
+              >
+                <path
+                  d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <section class="faq">

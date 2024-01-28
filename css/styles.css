@@ -1,12 +1,11 @@
 body {
   background-color: #1a1e1f;
-  color: rgb(244, 244, 244);
-  width: 100vw;
+  color: #f4f4f4;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
 }
 .main-container {
-  max-width: 980px;
+  max-width: 1000px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -22,17 +21,22 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
-/* section{
-  width: 100%;
-} */
+.sp-btw {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.logo {
+  width: 182px;
+  height: 40px;
+}
 header {
   width: 100%;
-  padding: 23px 0px;
+  padding: 21px 0px;
   position: sticky;
   top: 0;
-  background-color: rgb(22, 22, 22);
+  background-color: #1a1e1f;
   opacity: 0.9;
   z-index: 100;
 }
@@ -41,9 +45,10 @@ header {
   line-height: 26px;
 }
 nav ul li a {
-  color: rgb(244, 244, 244);
+  color: inherit;
   font-size: 14px;
   text-decoration: none;
+  padding: 0 10px;
 }
 nav ul li:nth-child(3) a {
   color: rgb(0, 174, 234);
@@ -51,44 +56,50 @@ nav ul li:nth-child(3) a {
 header,
 .nav-bar ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
 main {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .header-section {
   width: 100%;
-  height: 352px;
-  display: flex;
   position: relative;
-  justify-content: center;
-  background-image: url(/assets/images/meeting.webp);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
 }
-.header-section img {
-  width: 100%;
+.title {
+  line-height: 1.6em;
+}
+.title span {
+  font-size: 34px;
+  margin-top: 10px;
 }
 
 .header-text {
-  display: flex;
+  z-index: 10;
+  position: absolute;
   top: 50%;
-  max-width: 980px;
-  left: 0;
-  gap: 30px;
+  transform: translate(0, -50%);
 }
+.bcg-image {
+  width: 100%;
+  height: 352px;
+  background-image: url(/assets/images/meeting.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .about-project {
   width: 100%;
-  height: 465px;
-  color: #f4f4f4;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   padding: 65px 0 65px;
+  background-color: #2b2b2b;
 }
 .about-project h1 {
   font-size: 28px;
@@ -98,12 +109,17 @@ main {
   color: #00aeea;
   font-size: 20px;
 }
+.more {
+  margin-top: 35px;
+  font-weight: 900;
+  cursor: pointer;
+}
 
 /* TRAINING COURSES SECTION  */
-h4 {
-  color: #dbdbdb;
+.learning {
   font-size: 24px;
   margin: 35px 0 60px;
+  line-height: normal;
 }
 .courses {
   background-color: #161616;
@@ -112,30 +128,33 @@ h4 {
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 39px;
-  row-gap: 20px;
-  /* background-color: #161616; */
+  row-gap: 25px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 .course-card {
-  max-width: 300px;
-  max-height: 414px;
+  width: 300px;
+  height: 414px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   border: 1px solid rgba(85, 85, 85, 1);
   border-radius: 6px;
+  margin: -1px;
+}
+.course-card img {
+  width: 100%;
+  height: auto;
 }
 .course-details {
   width: 100%;
-  height: 100%;
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-top: 105px;
 }
 .sub-card {
-  padding: 35px 0 25px 20px;
+  padding: 30px 24px 24px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -144,60 +163,30 @@ h4 {
 }
 .sub-card p {
   font-size: 14px;
+  margin-top: -85px;
 }
 .course-title {
   font-size: 18px;
 }
+.course-details img {
+  width: 16px;
+  height: 17px;
+}
 .details {
   color: rgb(0, 174, 234);
+  cursor: pointer;
 }
 
-/* FOOTER SECTION */
-.footer {
-  width: 100%;
-  padding: 60px 0 45px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.rules {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-.btn-contact-us {
-  color: #ffffff;
-  background-color: #00aef3;
-  padding: 10px 30px;
-  font-size: 16px;
-  border-radius: 5px;
-}
-.contact {
-  max-width: 150px;
-  gap: 40px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: end;
-}
-.social-media {
-  display: flex;
-  justify-content: end;
-  gap: 5px;
-}
-
+/* SLIDER SECTION */
 .partnership {
   background-color: #2b2b2b;
-  max-height: 363px;
-  padding: 50px 0 100px;
+  height: 363px;
+  padding: 40px 0 80px;
 }
-
 .partners {
   font-size: 24px;
-  color: rgb(244, 244, 244);
   text-align: left;
 }
-
 .slider-container {
   text-align: center;
   color: #403f3d;
@@ -212,25 +201,19 @@ h4 {
   align-items: center;
   gap: 40px;
 }
-
 .slider {
   width: 100%;
   display: flex;
-  /* gap: 40px; */
   align-items: center;
-  /* background-color: coral; */
   justify-content: space-between;
   transition: transform 0.5s ease-in-out;
 }
-
 .slide {
   min-width: 100%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  /* gap: 100px; */
 }
-
 .slide1 {
   max-width: 980px;
   width: 100%;
@@ -244,61 +227,65 @@ h4 {
 }
 .header-text h3 {
   font-size: 42px;
-  color: #f4f4f4;
   font-weight: 900;
   display: block;
 }
 .slide img {
   width: auto;
 }
-
 .prevButton,
 .nextButton {
-  /* left: 4px; */
-  /* width: 18px;
-  height: 35px; */
-  /* color: #f4f4f4; */
   position: absolute;
   top: 50%;
-  background-color: #2b2b2b;
+  background-color: transparent;
   text-decoration: none;
   border: none;
+  transform: translate(0, -50%);
+}
+.nextButton svg,
+.prevButton svg {
+  background-color: transparent;
 }
 .leftArrow,
 .rightArrow {
   height: 35px;
   width: 18px;
   color: #00aef3;
-  fill: #ebe6e6;
+  fill: #e8e6e6;
   cursor: pointer;
 }
 .rightArrow {
   transform: rotate(-180deg);
 }
 .prevButton {
-  left: 200px;
+  left: 100px;
 }
 .nextButton {
-  right: 200px;
+  right: 100px;
 }
 .slider-divs {
   display: flex;
   justify-content: center;
-  /* height: 10px;
-  width: 100%; */
 }
 .slide-div {
   width: 6px;
   height: 6px;
-  background-color: #ebe6e6;
+  background-color: #e8e6e6;
   border-radius: 100%;
   margin: 0 6px;
   cursor: pointer;
 }
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* FAQ SECTION */
+
 .faq {
-  padding: 100px 0 75px;
+  padding: 105px 0 80px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -308,10 +295,10 @@ h4 {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 0 40px;
+  margin-bottom: 15px;
 }
 .faq-title h5 {
-  color: #f4f4f4;
   font-size: 24px;
 }
 .faq-title span {
@@ -320,7 +307,7 @@ h4 {
   font-weight: 900;
 }
 .question {
-  padding: 30px 0;
+  padding: 21px 0;
   border-bottom: 1px solid #403f3d;
   font-size: 18px;
   display: flex;
@@ -330,12 +317,13 @@ h4 {
   gap: 20px;
 }
 .question p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 2;
 }
 .content {
   display: flex;
   flex-direction: column;
+  margin: 0 40px;
 }
 .sub-question {
   display: flex;
@@ -363,25 +351,246 @@ h4 {
   margin-left: 1.5em !important;
 }
 
-
+/* FOOTER SECTION */
+.footer {
+  width: 100%;
+  padding: 60px 0 45px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.rules img {
+  width: 106px;
+  height: 30px;
+}
+.btn-contact-us {
+  color: #ffffff;
+  background-color: #00aef3;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.contact {
+  max-width: 150px;
+  gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: end;
+}
+.social-media {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.social-media img {
+  width: 39px;
+  height: 39px;
+  cursor: pointer;
+}
 /* HOVERS */
-.nav-list a, .more, .all-faq, .details, .btn-contact-us{
-  transition:  0.3s all;
+.nav-list a,
+.more,
+.all-faq,
+.details,
+.btn-contact-us {
+  transition: 0.3s all;
 }
-.nav-list:hover a{
+.answer,
+.sub-question,
+.question {
+  transition: transform 0.3s all;
+}
+.nav-list:hover a {
   color: #00aef3;
-  /* transition: transform 0.3s all; */
-
-
 }
-.more:hover, .all-faq:hover{
+.more:hover,
+.all-faq:hover {
   color: rgb(160, 160, 160);
-  /* opacity: 0.7; */
 }
-.details:hover{
+.details:hover {
   opacity: 0.7;
 }
 .btn-contact-us:hover {
   background-color: #dbdbdb;
   color: #403f3d;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-container {
+    padding: 0px 25px;
+  }
+  .training-courses {
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+  }
+  .course-card {
+    max-width: 250px;
+    height: 380px;
+  }
+  .sub-card {
+    gap: 10px;
+  }
+  .about-project h1 {
+    font-size: 24px;
+  }
+  h4 {
+    text-align: center;
+  }
+  .slide1,
+  .partners {
+    padding: 0 70px;
+  }
+  .slide1 img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .main-container {
+    padding: 0px 25px;
+  }
+  .training-courses {
+    width: 100%;
+    gap: 35px;
+    justify-content: center;
+  }
+  .course-card {
+    max-width: 300px;
+    height: 414px;
+  }
+
+  .about-project h1 {
+    font-size: 22px;
+  }
+  .header-text span {
+    font-size: 30px;
+  }
+  .header-text h3 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    padding: 0px 25px;
+  }
+  .training-courses {
+    width: 100%;
+    gap: 35px;
+    justify-content: center;
+  }
+  .course-card {
+    max-width: 270px;
+    height: 380px;
+  }
+  .about-project h1 {
+    font-size: 22px;
+  }
+  .header-text span {
+    font-size: 26px;
+  }
+  .header-text h3 {
+    font-size: 34px;
+  }
+  .nav-bar {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main-container {
+    padding: 0px 25px;
+  }
+  .training-courses {
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+  }
+  .course-card {
+    max-width: 250px;
+    height: 380px;
+  }
+  .about-project h1 {
+    font-size: 22px;
+  }
+  .header-text span {
+    font-size: 26px;
+  }
+  .header-text h3 {
+    font-size: 34px;
+  }
+  .nav-bar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .main-container {
+    padding: 0px 25px;
+  }
+  .training-courses {
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+  }
+  .course-card {
+    max-width: 100%;
+    height: 370px;
+  }
+  .about-project h1 {
+    font-size: 18px;
+  }
+  .header-text span {
+    font-size: 20px;
+  }
+  .header-text h3 {
+    font-size: 28px;
+  }
+  .nav-bar {
+    display: none;
+  }
+  .faq-title h5 {
+    font-size: 18px;
+  }
+  .faq-title span {
+    font-size: unset;
+  }
+  .faq-title {
+    padding: 0;
+    align-items: center;
+  }
+  .content {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    max-width: unset;
+  }
+  .social-media {
+    justify-content: center;
+    width: auto;
+  }
+  .btn-contact-us {
+    width: 100px;
+  }
+  .rules {
+    width: 100%;
+  }
 }
