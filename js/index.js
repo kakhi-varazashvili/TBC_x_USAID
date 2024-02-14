@@ -13,7 +13,6 @@ function showSlide(index) {
   } else {
     currentIndex = index;
   }
-  
 
   const transformValue = -currentIndex * 100 + "%";
   document.querySelector(".slider").style.transform =
@@ -44,22 +43,31 @@ for (let y of slideDiv) {
 // FAQ
 
 const questions = document.querySelectorAll(".sub-question");
-const arrowDown = document.querySelector(".arrow-down");
 
 let counter = 0;
 
-questions.forEach((question, index) => {
+questions.forEach((question) => {
   question.addEventListener("click", () => {
     const answer = question.nextElementSibling;
-
+    const btnDown = question.lastElementChild;
     answer.classList.toggle("show");
-    console.log(question, index);
+    btnDown.classList.toggle("arrow-up");
   });
 });
 
 const navBar = document.querySelector(".nav-bar");
 const burgerMenu = document.querySelector(".burger_menu");
+const x1 = document.querySelector(".bar1");
+const x2 = document.querySelector(".bar2");
+const x3 = document.querySelector(".bar3");
+const burgerBar = document.querySelectorAll(".burger-bar .bar1 .bar2 .bar3");
+
 burgerMenu.addEventListener("click", () => {
+  x1.classList.toggle("bar1-x");
+  x2.classList.toggle("bar2-x");
+  x3.classList.toggle("bar3-x");
+
+  burgerBar.style.transition = "none";
   counter++;
   if (counter % 2 !== 0) {
     navBar.style.display = "block";

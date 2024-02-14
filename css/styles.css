@@ -377,8 +377,35 @@ main {
 .arrowDown {
   fill: #f4f4f4;
 }
+
+.bar2-x {
+  display: none;
+  transition: none;
+
+  /* transform: rotate(-45deg); */
+}
+.bar1-x {
+  transform: rotate(-45deg);
+  top: 50%;
+  width: 100%;
+  left:  0;
+  transition: none;
+  /* top: 50%; */
+}
+.bar3-x {
+  width: 100%;
+  transform: rotate(45deg);
+  top: 50%;
+  left:  0;
+  transition: none;
+
+}
+
 .arrow-down {
   cursor: pointer;
+}
+.arrow-up {
+  transform: rotate(180deg);
 }
 .sub-question button {
   background-color: #161616;
