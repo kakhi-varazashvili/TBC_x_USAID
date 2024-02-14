@@ -13,6 +13,7 @@ function showSlide(index) {
   } else {
     currentIndex = index;
   }
+  
 
   const transformValue = -currentIndex * 100 + "%";
   document.querySelector(".slider").style.transform =
@@ -42,21 +43,17 @@ for (let y of slideDiv) {
 
 // FAQ
 
-const questions = document.querySelectorAll(".question");
+const questions = document.querySelectorAll(".sub-question");
 const arrowDown = document.querySelector(".arrow-down");
-const answer = document.querySelector(".answer");
 
 let counter = 0;
-questions.forEach((question) => {
+
+questions.forEach((question, index) => {
   question.addEventListener("click", () => {
-    counter++;
-    if (counter % 2 !== 0) {
-      answer.style.display = "grid";
-      arrowDown.style.transform = "rotate(-180deg)";
-    } else {
-      answer.style.display = "none";
-      arrowDown.style.transform = "rotate(0deg)";
-    }
+    const answer = question.nextElementSibling;
+
+    answer.classList.toggle("show");
+    console.log(question, index);
   });
 });
 
